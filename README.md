@@ -63,7 +63,7 @@ A sophisticated multimodal AI assistant inspired by Iron Man's Friday, built wit
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/friday-ai-assistant.git
+git clone https://github.com/khan-abdullah-aidev/Friday-AI-Assistant.git
 cd friday-ai-assistant
 
 # Install dependencies
@@ -100,11 +100,6 @@ N8N_MCP_SEVER_URL=your_n8n_mcp_server_url
 👤 "Play some jazz music"
 🤖 "Of course Sir, queuing up some sophisticated tunes for you."
 ```
-
-### Visual Input
-- Show objects for counting or identification
-- Display documents for analysis
-- Present images for description or questions
 
 ## 🧩 Core Components
 
@@ -185,10 +180,6 @@ The MCP (Model Context Protocol) integration allows for easy tool expansion:
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
