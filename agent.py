@@ -21,8 +21,9 @@ class Assistant(Agent):
     def __init__(self, chat_ctx = None) -> None:
         super().__init__(
             instructions=AGENT_INSTRUCTION,
-            llm= openai.realtime.RealtimeModel(
-                voice = 'Sage'
+            llm=google.beta.realtime.RealtimeModel(
+            voice="Aoede",
+            temperature=0.8,
             ),
             tools=[
                 get_weather,
@@ -73,14 +74,14 @@ async def entrypoint(ctx: agents.JobContext):
         )
 
     mcp_server = MCPServerSse(
-        params = {"url": os.environ.get("N8N_MCP_SEVER_URL")},
+        params = {"url": os.environ.get("N8N_MCP_SERVER_URL")},
         cache_tools_list= True,
         name = "SSE MCP Server"
     )
 
     agent = await MCPToolsIntegration.create_agent_with_tools(
         agent_class=Assistant, agent_kwargs={"chat_ctx": initial_ctx}, 
-        mcp_server= [mcp_server]
+        mcp_servers= [mcp_server]
     )
 
     await session.start(
